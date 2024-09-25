@@ -1,0 +1,117 @@
+{
+	"routes": [
+		{
+			"route": "/api/v1/login",
+			"method": "POST",
+			"controller": "../components/user/controller/UserController.js",
+			"secured": false,
+			"action": "login"
+		},
+		{
+			"route": "/api/v1/logout",
+			"method": "GET",
+			"controller": "../components/user/controller/UserController.js",
+			"secured": true,
+			"action": "logout"
+		},
+		{
+			"route": "/api/v1/isAdmin",
+			"method": "GET",
+			"controller": "../components/auth/controller/AuthController.js",
+			"secured": true,
+			"isAdminRoute": true,
+			"action": "isAdmin"
+		},
+		{
+			"route": "/api/v1/isUser",
+			"method": "GET",
+			"controller": "../components/auth/controller/AuthController.js",
+			"secured": true,
+			"action": "isUser"
+		},
+		{
+			"route": "/api/v1/user/",
+			"method": "POST",
+			"controller": "../components/user/controller/UserController.js",
+			"secured": false,
+			"isUserRoute": true,
+			"action": "createUser"
+		},
+		{
+			"route": "/api/v1/user/",
+			"method": "GET",
+			"controller": "../components/user/controller/UserController.js",
+			"secured": true,
+			"isAdminRoute": true,
+			"action": "getAllUsers"
+		},
+		{
+			"route": "/api/v1/updateParameter/",
+			"method": "POST",
+			"secured": true,
+			"isAdminRoute": true,
+			"controller": "../components/user/controller/UserController.js",
+			"action": "updateParameter"
+		},
+		{
+			"route": "/api/v1/user/getParameter/",
+			"method": "GET",
+			"secured": true,
+			"isAdminRoute": false,
+			"controller": "../components/user/controller/UserController.js",
+			"action": "getParameter"
+		},
+		{
+			"route": "/api/v1/url/:userId",
+			"method": "POST",
+			"controller": "../components/url/controller/UrlController.js",
+			"secured": true,
+			"isAdminRoute": false,
+			"action": "createURL"
+		},
+		{
+			"route": "/api/v1/url/:userId",
+			"method": "GET",
+			"controller": "../components/url/controller/UrlController.js",
+			"secured": true,
+			"isAdminRoute": true,
+			"isUserRoute": true,
+			"action": "getAllURL"
+		},
+		{
+			"route": "/api/v1/shorturl/:shortUrl",
+			"method": "GET",
+			"controller": "../components/url/controller/UrlController.js",
+			"secured": true,
+			"isAdminRoute": false,
+			"isUserRoute": true,
+			"action": "getOneUrl"
+		},
+		{
+			"route": "/:shortUrl",
+			"method": "GET",
+			"controller": "../components/url/controller/UrlController.js",
+			"secured": false,
+			"isUserRoute": true,
+			"action": "countUrlVisit"
+		},
+		{
+			"route": "/api/v1/user/additonal-url-payment/",
+			"method": "POST",
+			"controller": "../components/user/controller/UserController.js",
+			"secured": true,
+			"isAdminRoute": false,
+			"isUserRoute": true,
+			"action": "getMoreNoOfUrls"
+		},
+		{
+			"route": "/api/v1/url/additonal-url-visit-payment/",
+			"method": "POST",
+			"controller": "../components/url/controller/UrlController.js",
+			"secured": true,
+			"isAdminRoute": false,
+			"isUserRoute": true,
+			"action": "getMoreNoOfUrlVisits"
+		}
+	]
+}

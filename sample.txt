@@ -1,0 +1,20 @@
+{
+			"route": "/api/v1/admin",
+			"method": "GET",
+			"controller": "../components/admin/controller/AdminController.js",
+			"secured": true,
+			"isAdminRoute": true,
+			"action": "getAllUser"
+		},
+		{
+			"route": "/api/v1/admin/:userId",
+			"method": "GET",
+			"controller": "../components/admin/controller/AdminController.js",
+			"secured": true,
+			"isAdminRoute": true,
+			"action": "getOneUser"
+		},
+
+
+
+         
