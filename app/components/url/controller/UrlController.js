@@ -64,7 +64,6 @@ class UrlController {
 			res.set("X-Total-Count", count);
 			res.status(StatusCodes.OK).json(rows);
 		} catch (error) {
-			logger.error(`[UrlController] Error: ${error.message}`, error);
 			next(error);
 		}
 	}
@@ -98,7 +97,6 @@ class UrlController {
 
 			res.status(StatusCodes.OK).json(urlId);
 		} catch (error) {
-			logger.error(`[UrlController] Error: ${error.message}`, error);
 			next(error);
 		}
 	}
@@ -142,8 +140,6 @@ class UrlController {
 		try {
 			const logger = settingsConfig.logger;
 			logger.info(`[UrlController] : Inside getMoreNoOfUrlVisits`);
-
-			console.log("I am here>>>>>>>>>>>>>>>>>>>>>>");
 
 			const data = await this.urlService.getMoreNoOfUrlVisits(
 				settingsConfig,
