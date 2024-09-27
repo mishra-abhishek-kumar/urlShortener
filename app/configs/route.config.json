@@ -105,7 +105,7 @@
 			"action": "getMoreNoOfUrls"
 		},
 		{
-			"route": "/api/v1/url/additonal-url-visit-payment/",
+			"route": "/api/v1/additonal-url-visit-payment/",
 			"method": "POST",
 			"controller": "../components/url/controller/UrlController.js",
 			"secured": true,

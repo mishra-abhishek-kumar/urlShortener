@@ -18,8 +18,8 @@ const Logger = initLogger(get(settingsConfig, "settings.logger.level", null));
 const application = express();
 
 function configureApplication(app) {
-	// const whitelist = ["http://localhost:3000", "http://localhost:20200"];
-	const whitelist = ["http://localhost:3000"];
+	const whitelist = ["http://localhost:3000", "http://localhost:20200"];
+	// const whitelist = ["http://172.18.0.2:20200"];
 
 	const corsOptions = {
 		origin(origin, callback) {
@@ -31,6 +31,7 @@ function configureApplication(app) {
 			}
 		},
 		exposedHeaders: ["X-Total-Count"],
+
 	};
 
 	app.use(cors(corsOptions));

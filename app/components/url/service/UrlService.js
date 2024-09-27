@@ -292,6 +292,8 @@ class UrlService {
 				throw new Error("Unable to make payment");
 			}
 
+			console.log("I am here>>>>>>>>>>>>>>>.", data);
+
 			await t.commit();
 			return data;
 		} catch (error) {
